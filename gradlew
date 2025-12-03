@@ -1,3 +1,3 @@
 #!/bin/sh
-DIRNAME=$(dirname "$0")
-exec java -jar "$DIRNAME/gradle/wrapper/gradle-wrapper.jar" "$@"
+DIRNAME=$(cd "$(dirname "$0")" && pwd)
+java -jar "$DIRNAME/gradle/wrapper/gradle-wrapper.jar" "$@"
